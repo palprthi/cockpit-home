@@ -1,0 +1,74 @@
+/* Cockpit Home — Day/Week view styling (pairs with enhance.js) */
+
+.ck-day.ck-clickable { transition: transform .08s ease, box-shadow .12s ease; }
+.ck-day.ck-clickable:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.45);
+  filter: brightness(1.12);
+}
+
+.ck-view { margin-top: 4px; font-family: 'JetBrains Mono', monospace; }
+
+/* shared nav bar (prev / title / next) */
+.ck-nav-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.ck-nav-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #22d3ee;
+  text-transform: uppercase;
+}
+.ck-step {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 5px; color: #5a6982; cursor: pointer;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700;
+  letter-spacing: 1px; padding: 4px 10px;
+}
+.ck-step:hover { color: #e2e8f0; border-color: rgba(34,211,238,.5); }
+
+/* ---- Day view ---- */
+.ck-day-card {
+  position: relative; border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px; padding: 18px 18px 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,.03), transparent 70%);
+  overflow: hidden;
+}
+.ck-day-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  box-shadow: 0 0 12px currentColor;
+}
+.ck-day-type {
+  font-size: 9px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.ck-day-label { font-size: 26px; font-weight: 800; letter-spacing: .5px; }
+.ck-day-sub { font-size: 12px; color: #8696b3; margin-top: 4px; }
+.ck-day-block {
+  margin-top: 14px; font-size: 11px; letter-spacing: 1px; color: #5a6982;
+}
+
+/* ---- Week view ---- */
+.ck-week-list { display: flex; flex-direction: column; gap: 4px; }
+.ck-week-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto auto;
+  gap: 10px; align-items: center; text-align: left;
+  width: 100%;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+  border-left: 3px solid #2a3348;
+  border-radius: 7px; padding: 9px 12px; cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+}
+.ck-week-row:hover { background: rgba(255,255,255,.06); }
+.ck-week-row.is-sel { background: rgba(34,211,238,.10); border-color: rgba(34,211,238,.4); }
+.ck-week-dow { font-size: 9px; font-weight: 700; letter-spacing: 1px; color: #5a6982; }
+.ck-week-label { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ck-week-sub { font-size: 9px; color: #5a6982; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ck-week-block { font-size: 11px; font-weight: 700; color: #8696b3; }
+
+@media (max-width: 480px) {
+  .ck-week-row { grid-template-columns: 52px 1fr auto; }
+  .ck-week-sub { display: none; }
+  .ck-day-label { font-size: 22px; }
+}
