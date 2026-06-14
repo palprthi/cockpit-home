@@ -1,21 +1,541 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cockpit Home</title>
-  <style>
-    body { font-family: -apple-system, system-ui, sans-serif; background:#e8e8e8;
-           color:#333; max-width:680px; margin:12vh auto; padding:0 24px; line-height:1.6; }
-    code { background:#dcdcdc; padding:2px 6px; border-radius:4px; }
-  </style>
-</head>
-<body>
-  <h1>🛫 Cockpit Home</h1>
-  <p>This site is a placeholder. The real page is a frozen export of
-     <code>Home.md</code> from a private Obsidian vault.</p>
-  <p>To publish the real dashboard: export <code>Home.md</code> with the
-     <em>Webpage HTML Export</em> plugin into this folder (overwriting this file),
-     then run <code>./publish.sh</code>.</p>
-</body>
-</html>
+<!DOCTYPE html> <html lang="en"><head>
+<title>Home</title>
+<base href=".">
+<meta name="pathname" content="index.html">
+<meta name="description" content="second brain - Home">
+<meta property="og:title" content="Home">
+<meta property="og:description" content="second brain - Home">
+<meta property="og:type" content="website">
+<meta property="og:url" content="index.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="second brain"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-wasm-script" src="site-lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="site-lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager mod-macos is-hidden-frameless show-inline-title show-ribbon show-view-header minimal-default-light minimal-default-dark links-int-on links-ext-on full-width-media trim-cols sidebar-tabs-default is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event allow-fold-headings allow-fold-lists show-indentation-guide show-properties cockpit is-readable-line-width" data-type="markdown"><style id="MJX-CHTML-styles"></style><pre class="frontmatter language-yaml" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">cssclasses</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> cockpit
+<span class="token key atrule">banner</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading inline-title" id="Home_0">Home</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-pre"><div class="block-language-dataviewjs node-insert-event" style="overflow-x: auto;">
+<div style="
+  background:linear-gradient(155deg,#0c1622 0%,#0a1425 55%,#0d1117 100%);
+  border:1px solid rgba(255,255,255,0.07);border-radius:12px;
+  padding:14px 18px 14px;position:relative;overflow:hidden;
+  font-family:'JetBrains Mono','Fira Code','SF Mono',monospace;
+">
+  <div style="position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(34,211,238,0.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(34,211,238,0.03) 1px,transparent 1px);
+    background-size:40px 40px"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <div style="display:flex;align-items:center;gap:10px;white-space:nowrap">
+      <span id="ck-comp-badge" style="display:inline-flex;align-items:center;gap:6px;flex-shrink:0;
+        border:1px solid rgba(34,211,238,0.3);border-radius:20px;
+        padding:2px 11px 2px 8px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:#22d3ee;white-space:nowrap">
+        <span style="width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 7px #34d399;flex-shrink:0;display:inline-block"></span>&nbsp;SYSTEMS NOMINAL
+      </span>
+      <span style="font-size:10px;color:#283547;letter-spacing:1px;white-space:nowrap">CPT-A320 · HYD BASE · A320</span>
+    </div>
+    <div style="display:flex;gap:20px;text-align:right;flex-shrink:0">
+      <div>
+        <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-bottom:1px">BASE · HYD</div>
+        <div style="font-size:18px;font-weight:700;color:#e2e8f0;letter-spacing:1px;line-height:1;white-space:nowrap">
+          <span id="ck-hyd">14:15</span><span style="font-size:11px;color:#374d63">:<span id="ck-hyd-s">11</span></span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-bottom:1px">ZULU · UTC</div>
+        <div style="font-size:18px;font-weight:700;color:#e2e8f0;letter-spacing:1px;line-height:1;white-space:nowrap">
+          <span id="ck-utc">08:45</span><span style="font-size:11px;color:#374d63">:<span id="ck-utc-s">11</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr auto;gap:0 20px;align-items:end">
+    <div style="min-width:0">
+      <div style="font-size:20px;font-weight:800;color:#f1f5f9;line-height:1.2;white-space:nowrap">
+        <span id="ck-greet">Good afternoon</span>, <span style="color:#22d3ee">Captain Pavan</span>
+      </div>
+      <div style="font-size:9px;color:#283547;letter-spacing:2px;margin-top:4px;white-space:nowrap">
+        SECOND BRAIN ONLINE · 3 CAPTURES
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.05);margin-top:10px;padding-top:8px">
+        <div style="font-size:8px;color:#22d3ee;letter-spacing:2.5px;margin-bottom:5px;white-space:nowrap;overflow:hidden">NEXT REPORT — COUNTDOWN</div>
+        
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:nowrap">
+          <span style="display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
+            border:1px solid rgba(34,211,238,0.22);border-radius:20px;
+            padding:1px 10px 1px 7px;font-size:9px;font-weight:700;letter-spacing:1px;color:#22d3ee;white-space:nowrap">
+            <span style="width:5px;height:5px;border-radius:50%;background:#22d3ee;flex-shrink:0"></span>
+            A320 / 2-Sector
+          </span>
+          <span style="font-size:12px;color:#7a8fa6;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HYD → PAT → HYD</span>
+        </div>
+        <div style="font-size:8px;color:#283547;letter-spacing:1.5px;white-space:nowrap">REPORT WED 17 JUN · 14:25 · LOCAL BASE TIME</div>
+        
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0">
+      <div style="display:flex;gap:6px">
+        <button id="ck-capture" style="background:rgba(255,255,255,0.05);
+          border:1px solid rgba(255,255,255,0.1);border-radius:7px;
+          padding:6px 12px;color:#7a8fa6;cursor:pointer;
+          font-family:inherit;font-size:9px;font-weight:700;letter-spacing:1.5px;white-space:nowrap">
+          ⌁ QUICK CAPTURE ⌘K
+        </button>
+        <button id="ck-daily" style="background:rgba(34,211,238,0.1);
+          border:1px solid rgba(34,211,238,0.28);border-radius:7px;
+          padding:6px 12px;color:#22d3ee;cursor:pointer;
+          font-family:inherit;font-size:9px;font-weight:700;letter-spacing:1.5px;white-space:nowrap">
+          + TODAY'S LOG ⌘D
+        </button>
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:1px">
+        
+          <div style="text-align:center;min-width:42px">
+            <div id="ck-d" style="font-size:32px;font-weight:700;color:#22d3ee;
+              letter-spacing:1px;line-height:1;text-shadow:0 0 16px rgba(34,211,238,0.35)">03</div>
+            <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-top:3px">DAYS</div>
+          </div>
+          <div style="font-size:26px;color:#22d3ee;opacity:0.35;padding-bottom:14px;width:12px;text-align:center">:</div>
+        
+          <div style="text-align:center;min-width:42px">
+            <div id="ck-h" style="font-size:32px;font-weight:700;color:#22d3ee;
+              letter-spacing:1px;line-height:1;text-shadow:0 0 16px rgba(34,211,238,0.35)">00</div>
+            <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-top:3px">HRS</div>
+          </div>
+          <div style="font-size:26px;color:#22d3ee;opacity:0.35;padding-bottom:14px;width:12px;text-align:center">:</div>
+        
+          <div style="text-align:center;min-width:42px">
+            <div id="ck-m" style="font-size:32px;font-weight:700;color:#22d3ee;
+              letter-spacing:1px;line-height:1;text-shadow:0 0 16px rgba(34,211,238,0.35)">09</div>
+            <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-top:3px">MIN</div>
+          </div>
+          <div style="font-size:26px;color:#22d3ee;opacity:0.35;padding-bottom:14px;width:12px;text-align:center">:</div>
+        
+          <div style="text-align:center;min-width:42px">
+            <div id="ck-s" style="font-size:32px;font-weight:700;color:#22d3ee;
+              letter-spacing:1px;line-height:1;text-shadow:0 0 16px rgba(34,211,238,0.35)">48</div>
+            <div style="font-size:8px;color:#283547;letter-spacing:2px;margin-top:3px">SEC</div>
+          </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</div></div></div><div class="el-h2"><h2 data-heading="ROSTER · FULL CALENDAR" dir="auto" class="heading" id="ROSTER_·_FULL_CALENDAR_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>ROSTER · FULL CALENDAR</h2></div><div class="el-pre"><div class="block-language-dataviewjs node-insert-event" style="overflow-x: auto;">
+  <div style="display:grid;grid-template-columns:1fr 260px;gap:12px;align-items:stretch;-webkit-text-size-adjust:100%;text-size-adjust:100%">
+    <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 16px;height:100%;box-sizing:border-box;-webkit-text-size-adjust:100%;text-size-adjust:100%">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:4px">
+        <div>
+          <div style="font-size:9px;color:#3a4458;letter-spacing:2px">ROSTER · FULL CALENDAR</div>
+          <div style="font-size:12px;font-weight:700;color:#e2e8f0;margin-top:2px;letter-spacing:0.5px">JUNE 2026 — DUTY DENSITY · FATIGUE</div>
+          
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end">
+          <button data-ck-stale="" style="display:inline-flex;align-items:center;gap:5px;background:transparent;border:1px solid #ef444455;border-radius:20px;padding:3px 10px 3px 7px;color:#ef4444;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1px;white-space:nowrap">
+            <span style="width:5px;height:5px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>
+            STALE · 1D AGO
+          </button>
+          <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:2px;display:flex;gap:1px;">
+            <button data-ck-view="day" style="background:transparent;border:none;border-radius:6px;padding:3px 9px;color:#3a4458;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px">DAY</button>
+            <button data-ck-view="week" style="background:transparent;border:none;border-radius:6px;padding:3px 9px;color:#3a4458;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px">WEEK</button>
+            <button data-ck-view="month" style="background:rgba(255,255,255,0.13);border:none;border-radius:6px;padding:3px 9px;color:#e2e8f0;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px">MONTH</button>
+          </div>
+        </div>
+      </div>
+      <div data-ck-tip="" style="display:none;font-size:9px;color:#8696b3;padding:4px 8px;background:rgba(0,0,0,0.4);border-radius:6px;margin-bottom:6px">
+        eCrew → _data/roster.md · Last written: 13 Jun, 14:01 IST · To update: sync eCrew calendar then append to roster.md
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+    <button data-ck-nav="-1" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:5px;color:#5a6982;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1px;padding:3px 9px">◄ MAY 2026</button>
+    <span style="font-size:9px;font-weight:700;letter-spacing:2px;color:#22d3ee">JUNE 2026</span>
+    <button data-ck-nav="1" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:5px;color:#5a6982;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1px;padding:3px 9px">JUL 2026 ►</button>
+  </div><div style="overflow-x:auto;margin-top:0"><div class="ck-grid" style="grid-template-columns:repeat(7,minmax(62px,1fr))"><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">MON</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">TUE</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">WED</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">THU</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">FRI</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">SAT</div><div style="text-align:center;font-size:8px;font-weight:700;letter-spacing:1px;color:#3a4458;padding:3px 0">SUN</div><div class="ck-day" data-ck-date="2026-06-01" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">MON</span>
+        <span class="ck-num" style="color:#5a6982">1</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-02" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">TUE</span>
+        <span class="ck-num" style="color:#5a6982">2</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-03" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">WED</span>
+        <span class="ck-num" style="color:#5a6982">3</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-04" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">THU</span>
+        <span class="ck-num" style="color:#5a6982">4</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">AVC HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-05" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">FRI</span>
+        <span class="ck-num" style="color:#5a6982">5</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-DEL1<span style="font-size:7px;color:#f59e0b"> ✈</span></div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-DEL1</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">02:05</div>
+    </div><div class="ck-day" data-ck-date="2026-06-06" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SAT</span>
+        <span class="ck-num" style="color:#5a6982">6</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">DEL1-HYD</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">DEL1-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">02:05</div>
+    </div><div class="ck-day" data-ck-date="2026-06-07" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SUN</span>
+        <span class="ck-num" style="color:#5a6982">7</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">4-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-GOI-HYD-BBI1-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">05:20</div>
+    </div><div class="ck-day" data-ck-date="2026-06-08" style="background:linear-gradient(180deg,#2a33481f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">MON</span>
+        <span class="ck-num" style="color:#5a6982">8</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#2a3348;box-shadow:0 0 7px #2a334888"></div>
+      <div style="font-size:11px;font-weight:700;color:#2a3348;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">—</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-09" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">TUE</span>
+        <span class="ck-num" style="color:#5a6982">9</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">PMO</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">PMO HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-10" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">WED</span>
+        <span class="ck-num" style="color:#5a6982">10</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SCK</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SCK HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-11" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">THU</span>
+        <span class="ck-num" style="color:#5a6982">11</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SCK</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SCK HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-12" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">FRI</span>
+        <span class="ck-num" style="color:#5a6982">12</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-VTZ-HYD</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-VTZ-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">07:40</div>
+    </div><div class="ck-day" data-ck-date="2026-06-13" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(139,123,255,0.55);opacity:0.4;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SAT</span>
+        <span class="ck-num" style="color:#8b7bff">13</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">2-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-DEL1-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">04:40</div>
+    </div><div class="ck-day" data-ck-date="2026-06-14" style="background:linear-gradient(180deg,#fb71851f,transparent 70%);border:1px solid #22d3ee;;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SUN</span>
+        <span class="ck-num" style="color:#22d3ee">14</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#fb7185;box-shadow:0 0 7px #fb718588"></div>
+      <div style="font-size:11px;font-weight:700;color:#fb7185;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SBYP</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Standby HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-15" style="background:linear-gradient(180deg,#2a33481f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">MON</span>
+        <span class="ck-num" style="color:#5a6982">15</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#2a3348;box-shadow:0 0 7px #2a334888"></div>
+      <div style="font-size:11px;font-weight:700;color:#2a3348;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">—</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-16" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">TUE</span>
+        <span class="ck-num" style="color:#5a6982">16</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-17" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">WED</span>
+        <span class="ck-num" style="color:#5a6982">17</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">2-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-PAT-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">04:05</div>
+    </div><div class="ck-day" data-ck-date="2026-06-18" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">THU</span>
+        <span class="ck-num" style="color:#5a6982">18</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-19" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">FRI</span>
+        <span class="ck-num" style="color:#5a6982">19</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">2-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-DEL1-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">04:45</div>
+    </div><div class="ck-day" data-ck-date="2026-06-20" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SAT</span>
+        <span class="ck-num" style="color:#5a6982">20</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">4-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-VTZ-HYD-JDH-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">06:40</div>
+    </div><div class="ck-day" data-ck-date="2026-06-21" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SUN</span>
+        <span class="ck-num" style="color:#5a6982">21</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-SHJ<span style="font-size:7px;color:#f59e0b"> ✈</span></div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-SHJ</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">03:40</div>
+    </div><div class="ck-day" data-ck-date="2026-06-22" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">MON</span>
+        <span class="ck-num" style="color:#5a6982">22</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">2-SECTOR</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SHJ-TRV2-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">06:15</div>
+    </div><div class="ck-day" data-ck-date="2026-06-23" style="background:linear-gradient(180deg,#2a33481f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">TUE</span>
+        <span class="ck-num" style="color:#5a6982">23</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#2a3348;box-shadow:0 0 7px #2a334888"></div>
+      <div style="font-size:11px;font-weight:700;color:#2a3348;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">—</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-24" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">WED</span>
+        <span class="ck-num" style="color:#5a6982">24</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-25" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">THU</span>
+        <span class="ck-num" style="color:#5a6982">25</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">2-SECTOR<span style="font-size:7px;color:#f59e0b"> ✈</span></div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-TRZ-SIN2</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">06:00</div>
+    </div><div class="ck-day" data-ck-date="2026-06-26" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">FRI</span>
+        <span class="ck-num" style="color:#5a6982">26</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SIN2-HYD</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SIN2-HYD</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">04:35</div>
+    </div><div class="ck-day" data-ck-date="2026-06-27" style="background:linear-gradient(180deg,#34d3991f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SAT</span>
+        <span class="ck-num" style="color:#5a6982">27</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#34d399;box-shadow:0 0 7px #34d39988"></div>
+      <div style="font-size:11px;font-weight:700;color:#34d399;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">OFG HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-28" style="background:linear-gradient(180deg,#fb71851f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">SUN</span>
+        <span class="ck-num" style="color:#5a6982">28</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#fb7185;box-shadow:0 0 7px #fb718588"></div>
+      <div style="font-size:11px;font-weight:700;color:#fb7185;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SBYP</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Standby HYD</div>
+      
+    </div><div class="ck-day" data-ck-date="2026-06-29" style="background:linear-gradient(180deg,#22d3ee1f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">MON</span>
+        <span class="ck-num" style="color:#5a6982">29</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#22d3ee;box-shadow:0 0 7px #22d3ee88"></div>
+      <div style="font-size:11px;font-weight:700;color:#22d3ee;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-KWI1<span style="font-size:7px;color:#f59e0b"> ✈</span></div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">HYD-KWI1</div>
+      <div style="margin-top:4px;font-size:10px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;text-align:right">05:05</div>
+    </div><div class="ck-day" data-ck-date="2026-06-30" style="background:linear-gradient(180deg,#2a33481f,transparent 70%);border:1px solid rgba(255,255,255,.08);;cursor:pointer">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span class="ck-hud">TUE</span>
+        <span class="ck-num" style="color:#5a6982">30</span>
+      </div>
+      <div style="height:2px;border-radius:2px;margin:5px 0 6px;background:#2a3348;box-shadow:0 0 7px #2a334888"></div>
+      <div style="font-size:11px;font-weight:700;color:#2a3348;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">—</div>
+      <div style="font-size:9px;color:#5a6982;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></div>
+      
+    </div></div></div>
+  <div style="margin-top:12px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+      <span style="font-size:8px;color:#3a4458;letter-spacing:1.5px">ROSTER PATTERN</span>
+      <div style="flex:1;height:1px;background:rgba(255,255,255,0.05)"></div>
+    </div>
+    <div style="display:flex;gap:4px;align-items:stretch">
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:6px 3px;text-align:center;flex:1;min-width:0">
+    <div style="font-size:14px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;line-height:1;white-space:nowrap">13</div>
+    <div style="font-size:7px;color:#3a4458;letter-spacing:0.7px;margin-top:3px;white-space:nowrap">DUTY DAYS</div>
+  </div>
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:6px 3px;text-align:center;flex:1;min-width:0">
+    <div style="font-size:11px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;line-height:1;white-space:nowrap">62:55</div>
+    <div style="font-size:7px;color:#3a4458;letter-spacing:0.7px;margin-top:3px;white-space:nowrap">BLOCK HRS</div>
+  </div>
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:6px 3px;text-align:center;flex:1;min-width:0">
+    <div style="font-size:14px;font-weight:700;color:#34d399;font-family:'JetBrains Mono',monospace;line-height:1;white-space:nowrap">9</div>
+    <div style="font-size:7px;color:#3a4458;letter-spacing:0.7px;margin-top:3px;white-space:nowrap">BASE RTN</div>
+  </div>
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:6px 3px;text-align:center;flex:1;min-width:0">
+    <div style="font-size:14px;font-weight:700;color:#f59e0b;font-family:'JetBrains Mono',monospace;line-height:1;white-space:nowrap">4</div>
+    <div style="font-size:7px;color:#3a4458;letter-spacing:0.7px;margin-top:3px;white-space:nowrap">LAYOVERS</div>
+  </div>
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:6px 3px;text-align:center;flex:1;min-width:0">
+    <div style="font-size:14px;font-weight:700;color:#8b7bff;font-family:'JetBrains Mono',monospace;line-height:1;white-space:nowrap">2</div>
+    <div style="font-size:7px;color:#3a4458;letter-spacing:0.7px;margin-top:3px;white-space:nowrap">4-SECTOR</div>
+  </div>
+    </div>
+  </div>
+  <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;font-size:9px;color:#3a4458">
+    <span><b style="color:#22d3ee">■</b> Duty</span><span><b style="color:#34d399">■</b> Rest</span><span><b style="color:#f59e0b">■</b> Family</span><span><b style="color:#8b7bff">■</b> Personal</span><span><b style="color:#fb7185">■</b> Standby</span>
+    <span>💪 workout · 👨‍👩‍👧 family · 😴 rest · ✈ away &nbsp;·&nbsp; double-click to open</span>
+  </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 16px;height:100%;box-sizing:border-box;-webkit-text-size-adjust:100%;text-size-adjust:100%"><div style="background:#fbbf240a;border:1px solid #fbbf2428;border-radius:8px;padding:8px 10px;margin-bottom:10px;cursor:pointer;user-select:none" data-ck-comp-toggle="">
+    <div style="display:flex;align-items:center;gap:7px">
+      <span style="width:6px;height:6px;border-radius:50%;background:#fbbf24;box-shadow:0 0 6px #fbbf24;flex-shrink:0"></span>
+      <span style="font-size:8px;font-weight:700;color:#fbbf24;letter-spacing:1.5px;font-family:'JetBrains Mono',monospace;flex:1">COMPLIANCE · AMBER · 2 VIOLATIONS</span>
+      <span style="font-size:8px;font-weight:700;color:#fbbf24bb;font-family:'JetBrains Mono',monospace;letter-spacing:1px;border:1px solid #fbbf2444;border-radius:4px;padding:1px 6px">▼</span>
+    </div>
+    
+  </div><div style="font-size:9px;color:#3a4458;letter-spacing:2px;margin-bottom:8px">HUMAN FACTORS · THIS MONTH</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:10px">
+    <div style="text-align:center;background:rgba(251,113,133,0.07);border:1px solid #fb718533;border-radius:5px;padding:6px 2px">
+      <div style="font-size:18px;font-weight:700;color:#fb7185;font-family:'JetBrains Mono',monospace;line-height:1">1</div>
+      <div style="font-size:7px;color:#3a4458;letter-spacing:1px;margin-top:2px">WOCL DUTIES</div>
+    </div>
+    <div style="text-align:center;background:rgba(251,113,133,0.07);border:1px solid #fb718533;border-radius:5px;padding:6px 2px">
+      <div style="font-size:18px;font-weight:700;color:#fb7185;font-family:'JetBrains Mono',monospace;line-height:1">2</div>
+      <div style="font-size:7px;color:#3a4458;letter-spacing:1px;margin-top:2px">RED-EYE</div>
+    </div>
+    <div style="text-align:center;background:rgba(255,255,255,0.025);border-radius:5px;padding:6px 2px">
+      <div style="font-size:18px;font-weight:700;color:#fbbf24;font-family:'JetBrains Mono',monospace;line-height:1">4</div>
+      <div style="font-size:7px;color:#3a4458;letter-spacing:1px;margin-top:2px">MAX CONSEC</div>
+    </div>
+    <div style="text-align:center;background:rgba(255,255,255,0.025);border-radius:5px;padding:6px 2px">
+      <div style="font-size:18px;font-weight:700;color:#22d3ee;font-family:'JetBrains Mono',monospace;line-height:1">10.0</div>
+      <div style="font-size:7px;color:#3a4458;letter-spacing:1px;margin-top:2px">AVG FATIGUE</div>
+    </div>
+  </div>
+  <div style="font-size:8px;color:#3a4458;letter-spacing:1.5px;margin-bottom:4px">DUTY FATIGUE DISTRIBUTION</div>
+  <div style="display:flex;height:14px;border-radius:4px;overflow:hidden;margin-bottom:4px;gap:1px">
+    <div style="flex:4;background:#22d3ee99;border-radius:3px 0 0 3px"></div>
+    <div style="flex:4;background:#fbbf24aa"></div>
+    <div style="flex:5;background:#fb7185bb;border-radius:0 3px 3px 0"></div>
+    
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:7px;margin-bottom:10px">
+    <span style="color:#22d3ee">4 LOW</span>
+    <span style="color:#fbbf24">4 MOD</span>
+    <span style="color:#fb7185">5 HIGH</span>
+  </div>
+  <div style="font-size:8px;color:#3a4458;letter-spacing:1.5px;margin-bottom:4px">FTL BLOCK HOURS</div>
+  <div style="display:flex;gap:4px;justify-content:center">
+    <div style="text-align:center;flex:1">
+    <svg width="96" height="96" viewBox="0 0 96 96">
+      <circle cx="48" cy="48" r="36" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="7"></circle>
+      <circle cx="48" cy="48" r="36" fill="none" stroke="#22d3ee" stroke-width="7" stroke-dasharray="87.27344391672445 226.1946710584651" stroke-dashoffset="56.548667764616276" stroke-linecap="round" style="filter:drop-shadow(0 0 6px #22d3ee88)"></circle>
+      <text x="48" y="43" text-anchor="middle" style="fill:#f1f5f9;font-size:14px;font-weight:700;font-family:'JetBrains Mono',monospace">38:35</text>
+      <text x="48" y="57" text-anchor="middle" style="fill:#3a4458;font-size:9px;font-family:'JetBrains Mono',monospace">·100·</text>
+    </svg>
+    <div style="font-size:9px;color:#3a4458;letter-spacing:1.5px;margin-top:2px">28-DAY</div>
+  </div>
+    <div style="text-align:center;flex:1">
+    <svg width="96" height="96" viewBox="0 0 96 96">
+      <circle cx="48" cy="48" r="36" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="7"></circle>
+      <circle cx="48" cy="48" r="36" fill="none" stroke="#8b7bff" stroke-width="7" stroke-dasharray="80.83820552511112 226.1946710584651" stroke-dashoffset="56.548667764616276" stroke-linecap="round" style="filter:drop-shadow(0 0 6px #8b7bff88)"></circle>
+      <text x="48" y="43" text-anchor="middle" style="fill:#f1f5f9;font-size:14px;font-weight:700;font-family:'JetBrains Mono',monospace">357:23</text>
+      <text x="48" y="57" text-anchor="middle" style="fill:#3a4458;font-size:9px;font-family:'JetBrains Mono',monospace">·1000·</text>
+    </svg>
+    <div style="font-size:9px;color:#3a4458;letter-spacing:1.5px;margin-top:2px">165D</div>
+  </div>
+  </div>
+  <div style="margin-top:6px;text-align:center;font-size:7px;color:#2a3d52;letter-spacing:0.3px;line-height:1.6">
+    DGCA-CAR-FTL · reg 2026.01 · max_28_day_block_hours v1.0.0<br><span style="color:#22d3ee">⊙ 28-day total includes scheduled block hours</span>
+  </div>
+  <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;padding:4px 7px;background:rgba(255,255,255,0.02);border-radius:5px">
+    <span style="font-size:8px;color:#3a4458">REST / DUTY RATIO</span>
+    <span style="font-size:9px;font-weight:700;color:#34d399;font-family:'JetBrains Mono',monospace">0.85</span>
+  </div>
+  <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;padding:4px 7px;background:rgba(255,255,255,0.02);border-radius:5px">
+    <span style="font-size:8px;color:#3a4458">AVG FDP / DUTY</span>
+    <span style="font-size:9px;font-weight:700;color:#5a6982;font-family:'JetBrains Mono',monospace">07:17</span>
+  </div></div>
+  </div>
+  </div></div><div class="el-h2"><h2 data-heading="DAILY-NOTE HABIT" dir="auto" class="heading" id="DAILY-NOTE_HABIT_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>DAILY-NOTE HABIT</h2></div><div class="el-pre"><div class="block-language-dataviewjs node-insert-event" style="overflow-x: auto;"><div style="display:flex;align-items:baseline;gap:14px">
+ <div class="ck-num" style="font-size:38px;font-weight:700;color:#fb5e7e">1</div>
+ <div><div class="ck-hud">NOTES · LAST 42 DAYS</div>
+ <div class="ck-hud" style="color:#fb5e7e">0.2/WK · TARGET 7</div></div></div>
+ <div class="ck-bar" style="margin-top:12px"><i style="width:2.380952380952381%;background:#fb5e7e"></i></div>
+ <div style="font-size:12px;color:#8696b3;margin-top:8px">The heatmap, balance &amp; FTL all wait on this. <b>Target: 1 note/day × 14 days.</b></div></div></div><div class="el-h2"><h2 data-heading="CURRENCY · EXPIRIES" dir="auto" class="heading" id="CURRENCY_·_EXPIRIES_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>CURRENCY · EXPIRIES</h2></div><div class="el-pre"><div class="block-language-dataviewjs node-insert-event" style="overflow-x: auto;"><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+ <span>3 T/O + LDG (90-day)</span><span class="ck-num" style="color:#fb5e7e;font-weight:600">6d</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+ <span>Visa · USA</span><span class="ck-num" style="color:#fbbf24;font-weight:600">28d</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+ <span>Class 1 Medical</span><span class="ck-num" style="color:#34d399;font-weight:600">81d</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+ <span>Licence / IR</span><span class="ck-num" style="color:#34d399;font-weight:600">137d</span></div><div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+ <span>Passport</span><span class="ck-num" style="color:#34d399;font-weight:600">235d</span></div></div></div><div class="el-h2"><h2 data-heading="SECOND BRAIN · INBOX" dir="auto" class="heading" id="SECOND_BRAIN_·_INBOX_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>SECOND BRAIN · INBOX</h2></div><div class="el-pre"><div class="block-language-dataview node-insert-event" style="overflow-x: auto;"><ul class="dataview list-view-ul"><li><span><a data-tooltip-position="top" aria-label="_data/inbox.md" data-href="_data/inbox.md" href="_data/inbox.html" class="internal-link" target="_self" rel="noopener nofollow">inbox</a></span>: <span>-</span></li></ul></div></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div class="graph-view-wrapper"><div class="feature-header"><div class="feature-title">Interactive Graph</div></div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<div class="graph-icon graph-global" role="button" aria-label="Global Graph" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-git-fork"><circle cx="12" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path><path d="M12 12v3"></path></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="index.html#Home_0" data-path="#Home_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Home">Home</div></a><div class="tree-item-children"><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="index.html#ROSTER_·_FULL_CALENDAR_0" data-path="#ROSTER_·_FULL_CALENDAR_0"><div class="tree-item-inner heading-link" heading-name="ROSTER · FULL CALENDAR">ROSTER · FULL CALENDAR</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="index.html#DAILY-NOTE_HABIT_0" data-path="#DAILY-NOTE_HABIT_0"><div class="tree-item-inner heading-link" heading-name="DAILY-NOTE HABIT">DAILY-NOTE HABIT</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="index.html#CURRENCY_·_EXPIRIES_0" data-path="#CURRENCY_·_EXPIRIES_0"><div class="tree-item-inner heading-link" heading-name="CURRENCY · EXPIRIES">CURRENCY · EXPIRIES</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="index.html#SECOND_BRAIN_·_INBOX_0" data-path="#SECOND_BRAIN_·_INBOX_0"><div class="tree-item-inner heading-link" heading-name="SECOND BRAIN · INBOX">SECOND BRAIN · INBOX</div></a><div class="tree-item-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>
